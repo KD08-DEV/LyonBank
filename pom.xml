@@ -15,7 +15,7 @@
 	<name>LyonBank</name>
 	<description>Project lyon bank</description>
 	<properties>
-		<java.version>20</java.version>
+		<java.version>17</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -51,7 +51,7 @@
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
-			<version>8.0.26</version>
+			<version>8.0.28</version>
 			<scope>runtime</scope>
 		</dependency>
 	</dependencies>
