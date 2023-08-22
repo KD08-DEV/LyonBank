@@ -63,7 +63,6 @@
 				<configuration>
 					<skipTests>true</skipTests>
 				</configuration>
-
 			</plugin>
 		</plugins>
 		<finalName>docker-spring-boot</finalName>
