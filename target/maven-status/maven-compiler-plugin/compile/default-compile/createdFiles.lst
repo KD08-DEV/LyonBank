@@ -4,3 +4,4 @@ com\lyonbank\LyonBank\dao\UserDaoImp.class
 com\lyonbank\LyonBank\ServletInitializer.class
 com\lyonbank\LyonBank\LyonBankApplication.class
 com\lyonbank\LyonBank\controllers\UserController.class
+LyonBankDemo\LyonBank\LyonBankApplication.class
