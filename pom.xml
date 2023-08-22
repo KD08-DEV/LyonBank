@@ -58,13 +58,21 @@
 	<build>
 		<plugins>
 			<plugin>
+				<!-- Build an executable JAR -->
 				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-surefire-plugin</artifactId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>3.1.0</version>
 				<configuration>
-					<skipTests>true</skipTests>
+					<archive>
+						<manifest>
+							<addClasspath>true</addClasspath>
+							<classpathPrefix>lib/</classpathPrefix>
+							<mainClass>com.mypackage.MyClass</mainClass>
+						</manifest>
+					</archive>
+					<skip>true</skip>
 				</configuration>
 			</plugin>
 		</plugins>
-		<finalName>docker-spring-boot</finalName>
 	</build>
 </project>
