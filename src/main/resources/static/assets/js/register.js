@@ -5,18 +5,12 @@ $(document).ready(function() {
 
 async function registerUsers() {
     let data= {};
-    //data.name = ..;
-    //    data.lastName = document.getElementById('txtEmail').value;
-  //  data.phone = document.getElementById('txtEmail').value;
+    data.name = document.getElementById('name').value;
+    data.lastname = document.getElementById('lastname').value;
+    data.phone = document.getElementById('phone').value;
     data.email = document.getElementById('txtEmail').value;
     data.password = document.getElementById('txtPassword').value;
-
-    //let repeatPassword =  document.getElementById('txtRepetirPassword').value;
-
-   /* if(repeatPassword != data.password){
-        alert('The password doesnt match')
-        return;
-    }*/
+    data.confirmpassword = document.getElementById('confirmPassword').value;
 
     const request = await fetch('api/users', {
         method: 'POST',

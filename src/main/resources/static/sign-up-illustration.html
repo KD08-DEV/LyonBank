@@ -21,6 +21,7 @@
       
     <link rel="stylesheet" href="assets/css/theme.min.css" id="stylesheetLight">
     <link rel="stylesheet" href="assets/css/theme-dark.min.css" id="stylesheetDark">
+    <link rel="shortcut icon" href="assets/img/illustrations/LB.svg">
 
     <style>
       body {
@@ -30,7 +31,7 @@
     </style>
     
     <!-- Title -->
-    <title>Dashkit</title>
+    <title>Lyon Bank</title>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156446909-1"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag("js", new Date());gtag("config", "UA-156446909-1");</script>
@@ -46,7 +47,7 @@
 
           <!-- Image -->
           <div class="text-center">
-            <img src="assets/img/illustrations/happiness.svg" alt="..." class="img-fluid">
+            <img src="assets/img/illustrations/2.svg" alt="..." class="img-fluid">
           </div>
 
         </div>
@@ -65,12 +66,49 @@
           <!-- Form -->
           <form>
 
+            <!-- Name -->
+            <div class="form-group">
+
+              <!-- Label -->
+              <label>
+                Name
+              </label>
+
+              <!-- Input -->
+              <input type="name" class="form-control" placeholder="Enter Name" id = "name">
+
+            </div>
+            <!-- LastName -->
+            <div class="form-group">
+
+              <!-- Label -->
+              <label>
+                Lastname
+              </label>
+
+              <!-- Input -->
+              <input type="name" class="form-control" placeholder="Enter Lastname" id = "lastname">
+
+            </div>
+            <!-- Phone -->
+            <div class="form-group">
+
+              <!-- Label -->
+              <label>
+                Phone
+              </label>
+
+              <!-- Input -->
+              <input type="phone" class="form-control" placeholder="Enter Phone" id = "phone">
+
+            </div>
+
             <!-- Email address -->
             <div class="form-group">
 
               <!-- Label -->
               <label>
-                Email Address
+                Email address
               </label>
 
               <!-- Input -->
@@ -100,7 +138,27 @@
                 </div>
 
               </div>
+              <!-- Label -->
+              <label>
+                Confirm Password
+              </label>
+
+              <!-- Input group -->
+              <div class="input-group input-group-merge">
+
+                <!-- Input -->
+                <input type="password" class="form-control form-control-appended" placeholder="Confirm your password" id = "confirmPassword">
+
+                <!-- Icon -->
+                <div class="input-group-append">
+                  <span class="input-group-text">
+                    <i class="fe fe-eye"></i>
+                  </span>
+                </div>
+
+              </div>
             </div>
+
 
             <!-- Submit -->
             <button onclick="registerUsers()" href="#" class="btn btn-lg btn-block btn-primary mb-3">
