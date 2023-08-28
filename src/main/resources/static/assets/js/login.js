@@ -15,11 +15,11 @@ async function signIn() {
         },
         body: JSON.stringify(data)
     });
-    const response = await request.text();
+    const response = await request.json();
+    console.log(response)
     if (response !== 'FAIL'){
         localStorage.token = response;
         localStorage.email = data.email;
-        window.location.href = 'index.html'
         console.log(response);
     }else {
         alert("ERROR");

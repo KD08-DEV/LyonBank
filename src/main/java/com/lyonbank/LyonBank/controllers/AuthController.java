@@ -20,11 +20,11 @@ public class AuthController {
         System.out.println("UserChekiando"+ user.getPassword()+ user.getEmail());
         User userLogged = userDao.checkInfo(user);
         if(userLogged != null){
-           String tokenJwt = jwtUtill.create(String.valueOf(userLogged.getId()), userLogged.getEmail());
-            System.out.println("User sin Error"+ user.getPassword()+ user.getEmail());
-            return tokenJwt;
+           String tokenJwt = jwtUtill.create(String.valueOf(userLogged.getId()),userLogged.getEmail());
+           System.out.println("all good with "+userLogged.getPassword()+userLogged.getEmail()+userLogged.getId());
+           return tokenJwt;
         }
+        System.out.println("ERROR");
         return "FAIL";
     }
-
 }

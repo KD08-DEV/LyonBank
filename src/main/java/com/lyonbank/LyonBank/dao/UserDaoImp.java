@@ -8,7 +8,6 @@ import jakarta.persistence.PersistenceContext;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import javax.swing.text.html.parser.Entity;
 import java.util.List;
 
 @Repository
@@ -36,20 +35,26 @@ public class UserDaoImp implements UserDao{
     }
 
     @Override
-    public User checkInfo(User user){
+    public User checkInfo(User usuario) {
         String query = "FROM User WHERE email = :email";
         List<User> list = entityManager.createQuery(query)
-                .setParameter("email", user.getEmail())
+                .setParameter("email", usuario.getEmail())
                 .getResultList();
-        if(list.isEmpty()){
+
+        if (list.isEmpty()) {
+            System.out.println("La lista esta vacia");
             return null;
         }
+
+        System.out.println("La lista no esta vacia");
         String passwordHashed = list.get(0).getPassword();
-        //Authentication
+
         Argon2 argon2 = Argon2Factory.create(Argon2Factory.Argon2Types.ARGON2id);
-        if(argon2.verify(passwordHashed, user.getPassword())){
+        if (argon2.verify(passwordHashed, usuario.getPassword())) {
+            System.out.println("Se valido la clave");
             return list.get(0);
         }
+        System.out.println("No se valido la clave");
         return null;
     }
 }
