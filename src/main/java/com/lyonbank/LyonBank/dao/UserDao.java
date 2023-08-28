@@ -10,4 +10,6 @@ public interface UserDao {
     void delete(Long id);
 
     void register(User user);
+
+    User checkInfo(User user);
 }

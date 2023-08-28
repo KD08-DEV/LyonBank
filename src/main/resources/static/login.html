@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   
-<!-- Mirrored from dashkit.goodthemes.co/sign-in-cover.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 12 Mar 2020 03:24:10 GMT -->
+<!-- Mirrored from dashkit.goodthemes.co/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 12 Mar 2020 03:24:10 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
 <head>
     <meta charset="utf-8" />
@@ -14,13 +14,13 @@
     <link rel="stylesheet" href="assets/libs/quill/dist/quill.core.css" />
     <link rel="stylesheet" href="assets/libs/highlightjs/styles/vs2015.css" />
 
-    <!-- Map -->
+    <!-- Map
     <link href="../api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css" rel="stylesheet" />
-
-    <!-- Theme CSS -->
+   Theme CSS -->
       
     <link rel="stylesheet" href="assets/css/theme.min.css" id="stylesheetLight">
     <link rel="stylesheet" href="assets/css/theme-dark.min.css" id="stylesheetDark">
+    <link rel="shortcut icon" href="assets/img/illustrations/LB.svg">
 
     <style>
       body {
@@ -34,7 +34,6 @@
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156446909-1"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag("js", new Date());gtag("config", "UA-156446909-1");</script>
-
   </head>
   <body class="d-flex align-items-center bg-auth border-top border-top-2 border-primary">
 
@@ -64,7 +63,7 @@
               <label>Email Address</label>
 
               <!-- Input -->
-              <input type="email" class="form-control" placeholder="name@address.com">
+              <input type="email" class="form-control" id="txtEmail" placeholder="name@address.com"  >
 
             </div>
 
@@ -81,7 +80,7 @@
                 <div class="col-auto">
                   
                   <!-- Help text -->
-                  <a href="password-reset-cover.html" class="form-text small text-muted">
+                  <a href="# class="form-text small text-muted>
                     Forgot password?
                   </a>
 
@@ -92,7 +91,7 @@
               <div class="input-group input-group-merge">
 
                 <!-- Input -->
-                <input type="password" class="form-control form-control-appended" placeholder="Enter your password">
+                <input type="password" class="form-control form-control-appended" id="txtPassword"  placeholder="Enter your password">
 
                 <!-- Icon -->
                 <div class="input-group-append">
@@ -105,14 +104,14 @@
             </div>
 
             <!-- Submit -->
-            <button class="btn btn-lg btn-block btn-primary mb-3">
-              Sign in
+            <button onclick="signIn()" href="#" class="btn btn-lg btn-block btn-primary mb-3">
+              Log in
             </button>
 
             <!-- Link -->
             <p class="text-center">
               <small class="text-muted text-center">
-                Don't have an account yet? <a href="sign-up-cover.html">Sign up</a>.
+                Don't have an account yet? <a href="#">Sign up</a>.
               </small>
             </p>
             
@@ -145,14 +144,13 @@
     <script src="assets/libs/select2/dist/js/select2.full.min.js"></script>
     <script src="assets/libs/chart.js/Chart.extension.js"></script>
 
-    <!-- Map -->
+    <!-- Map
     <script src='../api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
-
+-->
     <!-- Theme JS -->
     <script src="assets/js/theme.min.js"></script>
 
-
+    <script src="assets/js/login.js"></script>
   </body>
-
-<!-- Mirrored from dashkit.goodthemes.co/sign-in-cover.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 12 Mar 2020 03:24:11 GMT -->
+<!-- Mirrored from dashkit.goodthemes.co/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 12 Mar 2020 03:24:11 GMT -->
 </html>

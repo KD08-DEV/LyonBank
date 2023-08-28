@@ -1,8 +1,6 @@
 $(document).ready(function() {
  //on ready
 });
-
-
 async function registerUsers() {
     let data= {};
     data.name = document.getElementById('name').value;
@@ -10,7 +8,12 @@ async function registerUsers() {
     data.phone = document.getElementById('phone').value;
     data.email = document.getElementById('txtEmail').value;
     data.password = document.getElementById('txtPassword').value;
-    data.confirmpassword = document.getElementById('confirmPassword').value;
+    let confirmpassword  = document.getElementById('confirmPassword').value;
+
+    if(confirmpassword != data.password){
+        alert("The password you entered did not match");
+        return;
+    }
 
     const request = await fetch('api/users', {
         method: 'POST',
@@ -20,6 +23,6 @@ async function registerUsers() {
         },
         body: JSON.stringify(data)
     });
-    const users = await request.json();
-
+    alert("The account was created successfully!");
+    window.location.href = 'login.html';
 }
