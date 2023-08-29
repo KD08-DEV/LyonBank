@@ -1,11 +1,14 @@
 $(document).ready(function() {
     //on ready
 });
-async function signIn() {
+/**
+ * @param {Event} event
+ */
+async function signIn(event) {
+    event.preventDefault();
     let data= {};
     data.email = document.getElementById('txtEmail').value;
     data.password = document.getElementById('txtPassword').value;
-    console.log(data.password, data.email);
 
     const request = await fetch('api/login', {
         method: 'POST',
@@ -15,14 +18,14 @@ async function signIn() {
         },
         body: JSON.stringify(data)
     });
-    const response = await request.json();
-    console.log(response)
-    if (response !== 'FAIL'){
+    const response = await request.text();
+    if (response != 'FAIL'){
         localStorage.token = response;
         localStorage.email = data.email;
+        window.location.href= 'index.html';
         console.log(response);
     }else {
-        alert("ERROR");
+        alert("Try again please, password or email wrong");
     }
 
 }

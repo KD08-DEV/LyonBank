@@ -42,19 +42,19 @@ public class UserDaoImp implements UserDao{
                 .getResultList();
 
         if (list.isEmpty()) {
-            System.out.println("La lista esta vacia");
+            System.out.println("The list is empty");
             return null;
         }
 
-        System.out.println("La lista no esta vacia");
+        System.out.println("The list isn't empty");
         String passwordHashed = list.get(0).getPassword();
 
         Argon2 argon2 = Argon2Factory.create(Argon2Factory.Argon2Types.ARGON2id);
         if (argon2.verify(passwordHashed, usuario.getPassword())) {
-            System.out.println("Se valido la clave");
+            System.out.println("The password is ok");
             return list.get(0);
         }
-        System.out.println("No se valido la clave");
+        System.out.println("The password isn't ok");
         return null;
     }
 }
