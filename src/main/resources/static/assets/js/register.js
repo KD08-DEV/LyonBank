@@ -28,20 +28,29 @@ async function registerUsers() {
 }
 
 //show password logic
-
 const password = document.getElementById('show-password');
 password.addEventListener('click', showPassword);
 
 const confirmPassword = document.getElementById('show-confirm');
 confirmPassword.addEventListener('click', showConfirmPassword);
 
+//eye icon
+const eyeIcon = document.getElementById('eyeIcon');
+
+const eyeIconConfirm = document.getElementById('eyeIconConfirm');
+
+
 
 function showPassword() {
     var x = document.getElementById("txtPassword");
     if (x.type === "password") {
         x.type = "text";
+        eyeIcon.classList.remove('fe-eye');
+        eyeIcon.classList.add('fe-eye-off');
     } else {
         x.type = "password";
+        eyeIcon.classList.remove('fe-eye-off');
+        eyeIcon.classList.add('fe-eye');
     }
 }
 
@@ -49,8 +58,12 @@ function showConfirmPassword() {
     var x = document.getElementById("confirmPassword");
     if (x.type === "password") {
         x.type = "text";
+        eyeIconConfirm.classList.remove('fe-eye');
+        eyeIconConfirm.classList.add('fe-eye-off');
     } else {
         x.type = "password";
+        eyeIconConfirm.classList.remove('fe-eye-off');
+        eyeIconConfirm.classList.add('fe-eye');
     }
 }
 
